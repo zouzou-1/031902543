@@ -193,7 +193,7 @@ class sensitive_class(object):
             if len(print_out[count]):
                 count_1+=len(print_out[count]) 
         #结果写入规定txt
-        f=open(str(read_file_name[3]),'w')
+        f=open(str(read_file_name[3]),'w',encoding='utf-8') 
         f.write('Total: '+str(count_1)+'\n')
         for i in range(1,len(print_out)):
             w=print_out[i]
@@ -220,4 +220,3 @@ if __name__=='__main__':
     sensitive_map=sensitive_class()
     #调用敏感词检测函数：
     sensitive_map.test_for_sensitivewords()
- 
